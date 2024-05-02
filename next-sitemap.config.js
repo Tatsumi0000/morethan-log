@@ -5,5 +5,5 @@ module.exports = {
   generateRobotsTxt: true,
   sitemapSize: 7000,
   generateIndexSitemap: false,
-  exclude: ['*tag=*', '/about', '*category=*', '*search'],
+  exclude: ['\?tag=*', '/about', '\?category=*'],
 }
