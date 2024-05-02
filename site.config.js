@@ -2,7 +2,7 @@ const CONFIG = {
   // profile setting (required)
   profile: {
     name: "Tatsumi0000",
-    image: "/avatar.svg", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
+    image: "/avatar.webp", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
     role: "mobile developer",
     bio: "I study Android, iOS, Docker, Vue.js, Rails and Kubernetes.",
     email: "info@aespa.love",
