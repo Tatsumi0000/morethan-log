@@ -7,6 +7,8 @@ const CONFIG = {
     bio: "I study Android, iOS, Docker, Vue.js, Rails and Kubernetes.",
     email: "info@aespa.love",
     github: "Tatsumi0000",
+    linkedin: "",
+    instagram: "",
   },
   projects: [
     {
@@ -21,7 +23,7 @@ const CONFIG = {
   // blog setting (required)
   blog: {
     title: "私的歌詞倉庫",
-    description: "こんにちは！技術的なことを書いているブログです。",
+    description: "こんにちは！技術的なことを中心に書いているブログです。",
   },
 
   // CONFIG configration (required)
