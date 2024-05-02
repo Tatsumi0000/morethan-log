@@ -11,6 +11,7 @@ import { queryKey } from "src/constants/queryKey"
 import { dehydrate } from "@tanstack/react-query"
 import usePostQuery from "src/hooks/usePostQuery"
 import { FilterPostsOptions } from "src/libs/utils/notion/filterPosts"
+import { execTemplate } from "src/libs/utils"
 
 const filter: FilterPostsOptions = {
   acceptStatus: ["Public", "PublicOnDetail"],
@@ -57,9 +58,15 @@ const DetailPage: NextPageWithLayout = () => {
   if (!post) return <CustomError />
 
   const image =
-    post.thumbnail ??
-    CONFIG.ogImageGenerateURL ??
-    `${CONFIG.ogImageGenerateURL}/${encodeURIComponent(post.title)}.png`
+    CONFIG.ogImageGenerateURL &&
+    (CONFIG.ogImageGenerateURL === "https://og-image-craigary.vercel.app"
+      ? CONFIG.ogImageGenerateURL +
+        `${encodeURIComponent(
+          post.title
+        )}.png?theme=dark&md=1&fontSize=125px&images=https%3A%2F%2Fnobelium.vercel.app%2Flogo-for-dark-bg.svg`
+      : execTemplate(CONFIG.ogImageGenerateURL, {
+          title: encodeURIComponent(post.title),
+        }))
 
   const date = post.date?.start_date || post.createdTime || ""
 
