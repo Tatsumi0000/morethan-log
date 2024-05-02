@@ -1,5 +1,7 @@
 import { CONFIG } from "site.config"
 import Head from "next/head"
+import { exclude } from "next-sitemap.config"
+import { useRouter } from "next/router"
 
 export type MetaConfigProps = {
   title: string
@@ -11,10 +13,19 @@ export type MetaConfigProps = {
 }
 
 const MetaConfig: React.FC<MetaConfigProps> = (props) => {
+  const router = useRouter()
+  const isNoIndex = exclude.some((pattern) =>
+    new RegExp(pattern).test(router.asPath)
+  )
+
   return (
     <Head>
       <title>{props.title}</title>
-      <meta name="robots" content="follow, index" />
+      {isNoIndex ? (
+        <meta name="robots" content="nofollow, noindex" />
+      ) : (
+        <meta name="robots" content="follow, index" />
+      )}
       <meta charSet="UTF-8" />
       <meta name="description" content={props.description} />
       {/* og */}
