@@ -25,7 +25,7 @@ export const generateRss = async (): Promise<string> => {
       id: `${CONFIG.link}/${post.slug}`,
       link: `${CONFIG.link}/${post.slug}`,
       description: post.summary,
-      date: new Date(post.date.start_date),
+      date: new Date(post.date),
     })
   }
   return feed.rss2()
