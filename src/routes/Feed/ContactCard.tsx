@@ -23,7 +23,7 @@ const ContactCard: React.FC = () => {
             target="_blank"
           >
             <AiOutlineGithub className="icon" />
-            <div className="name">github</div>
+            <div className="name">GitHub</div>
           </a>
         )}
         {CONFIG.profile.instagram && (
