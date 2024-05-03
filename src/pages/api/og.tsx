@@ -45,6 +45,8 @@ export default async function handler(req: NextRequest) {
             width: "100%",
             color: "white",
             fontSize: 80,
+            paddingLeft: 30,
+            paddingRight: 30,
             wordBreak: "break-all",
             fontFamily: '"NotoSansJP"',
           }}
