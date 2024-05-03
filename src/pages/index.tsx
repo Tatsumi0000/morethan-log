@@ -22,10 +22,13 @@ export const getStaticProps: GetStaticProps = async () => {
 }
 
 const FeedPage: NextPageWithLayout = () => {
+  const image = `${CONFIG.link}/api/og?title=${CONFIG.blog.title}`
+
   const meta = {
     title: CONFIG.blog.title,
     description: CONFIG.blog.description,
     type: "website",
+    image: image,
     url: CONFIG.link,
   }
 
