@@ -57,10 +57,12 @@ const DetailPage: NextPageWithLayout = () => {
 
   if (!post) return <CustomError />
 
-  const image = `${CONFIG.link}/api/og?title=${post.title}`
-
   const date = post.date?.start_date || post.createdTime || ""
-
+  const image =
+    post.thumbnail ??
+    CONFIG.ogImageGenerateURL ??
+    `${CONFIG.ogImageGenerateURL}/${encodeURIComponent(post.title)}.png`
+    
   const meta = {
     title: post.title,
     date: new Date(date).toISOString(),
