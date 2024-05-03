@@ -57,16 +57,7 @@ const DetailPage: NextPageWithLayout = () => {
 
   if (!post) return <CustomError />
 
-  const image =
-    CONFIG.ogImageGenerateURL &&
-    (CONFIG.ogImageGenerateURL === "https://og-image-craigary.vercel.app"
-      ? CONFIG.ogImageGenerateURL +
-        `${encodeURIComponent(
-          post.title
-        )}.png?theme=dark&md=1&fontSize=125px&images=https%3A%2F%2Fnobelium.vercel.app%2Flogo-for-dark-bg.svg`
-      : execTemplate(CONFIG.ogImageGenerateURL, {
-          title: encodeURIComponent(post.title),
-        }))
+  const image = `${CONFIG.link}/api/og?title=${post.title}`
 
   const date = post.date?.start_date || post.createdTime || ""
 
