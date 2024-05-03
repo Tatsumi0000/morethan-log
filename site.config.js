@@ -30,7 +30,7 @@ const CONFIG = {
   link: "https://blog.aespa.love",
   since: 2022, // If leave this empty, current year will be used.
   lang: "ja-JP", // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES', 'ko-KR']
-  ogImageGenerateURL: "https://og-image-craigary.vercel.app", // The link to generate OG image, don't end with a slash
+  ogImageGenerateURL: "", // The link to generate OG image, don't end with a slash
 
   // notion configuration (required)
   notionConfig: {
