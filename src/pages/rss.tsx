@@ -4,7 +4,6 @@ import { GetServerSidePropsContext } from "next"
 export const getServerSideProps = async ({
   res,
 }: GetServerSidePropsContext) => {
-
   const xmlFeed = await generateRss()
   res.statusCode = 200
   res.setHeader("Cache-Control", "s-maxage=86400, stale-while-revalidate")
