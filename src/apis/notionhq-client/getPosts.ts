@@ -8,8 +8,8 @@ export const getPosts = async (page_size = 100) => {
     page_size: page_size,
     sorts: [
       {
+        property: "date",
         direction: "descending",
-        timestamp: "created_time",
       },
     ],
     filter: {
