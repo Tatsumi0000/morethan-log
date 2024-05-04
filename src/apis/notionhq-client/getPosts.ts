@@ -12,6 +12,12 @@ export const getPosts = async (page_size = 100) => {
         timestamp: "created_time",
       },
     ],
+    filter: {
+      property: "status",
+      select: {
+        equals: "Public",
+      },
+    },
   })
   return response
 }

@@ -7,8 +7,8 @@ export const getPostsRSS2 = async (page_size = 100) => {
     rss2.push({
       title: result.properties.title.title[0].plain_text ?? "",
       summary: result.properties.summary.rich_text[0]?.plain_text ?? "",
-      date: new Date(result.properties.date.date.start),
-      slug: result.properties.slug.rich_text[0].plain_text ?? "",
+      date: new Date(result.created_time),
+      slug: result.properties.slug.rich_text[0]?.plain_text ?? "",
     })
   })
   return rss2
