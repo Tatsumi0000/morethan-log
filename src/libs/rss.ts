@@ -1,9 +1,9 @@
 import { Feed } from "feed"
-import { getPosts } from "src/apis"
 import { CONFIG } from "site.config"
+import { getPostsRSS2 } from "src/apis/notionhq-client"
 
 export const generateRss = async (): Promise<string> => {
-  const posts = await getPosts()
+  const response = await getPostsRSS2(5)
   const year = new Date().getFullYear()
   const feed = new Feed({
     title: CONFIG.blog.title,
@@ -19,13 +19,13 @@ export const generateRss = async (): Promise<string> => {
       link: CONFIG.link,
     },
   })
-  for (const post of posts.slice(0, 5)) {
+  for (const post of response) {
     feed.addItem({
       title: post.title,
       id: `${CONFIG.link}/${post.slug}`,
       link: `${CONFIG.link}/${post.slug}`,
       description: post.summary,
-      date: new Date(post.date as any),
+      date: post.date,
     })
   }
   return feed.rss2()
