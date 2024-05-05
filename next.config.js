@@ -6,6 +6,7 @@ module.exports = {
       "s3-us-west-2.amazonaws.com",
       "lh5.googleusercontent.com",
     ],
+    unoptimized: true,
   },
   output: "export",
   staticPageGenerationTimeout: 1000,
