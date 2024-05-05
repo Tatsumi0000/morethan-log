@@ -7,5 +7,6 @@ module.exports = {
       "lh5.googleusercontent.com",
     ],
   },
+  output: "export",
   staticPageGenerationTimeout: 1000,
 }
