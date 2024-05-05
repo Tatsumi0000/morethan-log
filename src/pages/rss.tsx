@@ -1,8 +1,6 @@
 import { generateRss } from "src/libs/rss"
 import { GetServerSidePropsContext } from "next"
 
-export const runtime = "experimental-edge"
-
 export const getServerSideProps = async ({
   res,
 }: GetServerSidePropsContext) => {
