@@ -158,10 +158,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@corex/deepmerge@npm:^4.0.29":
-  version: 4.0.29
-  resolution: "@corex/deepmerge@npm:4.0.29"
-  checksum: 10c0/0c1b8d344ce0fb6ed0bea6a30a1177d1f8af000ebb2b2895cdff808573a8ce8723d3c4dd3d44dfec907d39fc348f06f9a94cd765e5c261de17e46ff96b63855f
+"@corex/deepmerge@npm:^4.0.43":
+  version: 4.0.43
+  resolution: "@corex/deepmerge@npm:4.0.43"
+  checksum: 10c0/3dc31721d10c0552c667392e01a67034d9f39417d275fb2f986140592fbdb5cbcf5ac82b45bcbaf9747fd659017bc7857283019d11929e8b03e8966934ab34b9
   languageName: node
   linkType: hard
 
@@ -467,6 +467,13 @@ __metadata:
   version: 13.4.9
   resolution: "@next/env@npm:13.4.9"
   checksum: 10c0/712cd2012d42f28bd9af5659cab1cb6e2b33e6ada38f06a83411cbdcc90e39c94c924a4eb7ab3635bf5ef5fa88d24ed856e1e5f07d6c470fef317daf88d5d520
+  languageName: node
+  linkType: hard
+
+"@next/env@npm:^13.4.3":
+  version: 13.5.6
+  resolution: "@next/env@npm:13.5.6"
+  checksum: 10c0/b1fefa21b698397a2f922ee53a5ecb91ff858f042b2a198652b9de49c031fc5e00d79da92ba7d84ef205e95368d5afbb0f104abaf00e9dde7985d9eae63bb4fb
   languageName: node
   linkType: hard
 
@@ -3049,6 +3056,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fast-glob@npm:^3.2.12":
+  version: 3.3.2
+  resolution: "fast-glob@npm:3.3.2"
+  dependencies:
+    "@nodelib/fs.stat": "npm:^2.0.2"
+    "@nodelib/fs.walk": "npm:^1.2.3"
+    glob-parent: "npm:^5.1.2"
+    merge2: "npm:^1.3.0"
+    micromatch: "npm:^4.0.4"
+  checksum: 10c0/42baad7b9cd40b63e42039132bde27ca2cb3a4950d0a0f9abe4639ea1aa9d3e3b40f98b1fe31cbc0cc17b664c9ea7447d911a152fa34ec5b72977b125a6fc845
+  languageName: node
+  linkType: hard
+
 "fast-glob@npm:^3.2.9":
   version: 3.2.11
   resolution: "fast-glob@npm:3.2.11"
@@ -4551,6 +4571,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"minimist@npm:^1.2.8":
+  version: 1.2.8
+  resolution: "minimist@npm:1.2.8"
+  checksum: 10c0/19d3fcdca050087b84c2029841a093691a91259a47def2f18222f41e7645a0b7c44ef4b40e88a1e58a40c84d2ef0ee6047c55594d298146d0eb3f6b737c20ce6
+  languageName: node
+  linkType: hard
+
 "minipass-collect@npm:^2.0.1":
   version: 2.0.1
   resolution: "minipass-collect@npm:2.0.1"
@@ -4674,7 +4701,7 @@ __metadata:
     feed: "npm:^4.2.2"
     mermaid: "npm:^9.3.0"
     next: "npm:^13.4.9"
-    next-sitemap: "npm:^3.1.32"
+    next-sitemap: "npm:^4.2.3"
     notion-client: "npm:^6.16.0"
     notion-types: "npm:^6.16.0"
     notion-utils: "npm:^6.16.0"
@@ -4762,19 +4789,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-sitemap@npm:^3.1.32":
-  version: 3.1.32
-  resolution: "next-sitemap@npm:3.1.32"
+"next-sitemap@npm:^4.2.3":
+  version: 4.2.3
+  resolution: "next-sitemap@npm:4.2.3"
   dependencies:
-    "@corex/deepmerge": "npm:^4.0.29"
-    minimist: "npm:^1.2.6"
+    "@corex/deepmerge": "npm:^4.0.43"
+    "@next/env": "npm:^13.4.3"
+    fast-glob: "npm:^3.2.12"
+    minimist: "npm:^1.2.8"
   peerDependencies:
-    "@next/env": "*"
     next: "*"
   bin:
     next-sitemap: bin/next-sitemap.mjs
     next-sitemap-cjs: bin/next-sitemap.cjs
-  checksum: 10c0/ea95afd42291cedfcdf30f6f822f235f640df95ed9e8089c43dade8591bfc314fb5661af71c665509f239a5ab22ad127cf529e889b03f93a15fbf4e73575d7a9
+  checksum: 10c0/8a367c9db84ca249797ec900d06c267434265bf635a82bc0896d35bc0ce85eee0cf115d4340baa93dd20fde081e513115d38776b5e8a5b3fb604c7b34a8542ea
   languageName: node
   linkType: hard
 
