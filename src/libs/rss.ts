@@ -1,8 +1,9 @@
 import { Feed } from "feed"
 import { CONFIG } from "site.config"
 import { getPostsRSS2 } from "src/apis/notionhq-client"
+import fs from "fs"
 
-export const generateRss = async (): Promise<string> => {
+export const generateRss = async () => {
   const response = await getPostsRSS2(5)
   const year = new Date().getFullYear()
   const feed = new Feed({
@@ -28,5 +29,6 @@ export const generateRss = async (): Promise<string> => {
       date: post.date,
     })
   }
-  return feed.rss2()
+  const PATH = "./public/rss.xml"
+  fs.writeFileSync(PATH, feed.rss2())
 }
