@@ -6,4 +6,5 @@ module.exports = {
   sitemapSize: 7000,
   generateIndexSitemap: false,
   exclude: ["\\?tag=*", "/about", "\\?category=*", "/api*"],
+  outDir: "./.vercel/output/static",
 }
