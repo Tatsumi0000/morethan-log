@@ -18,7 +18,6 @@
 # next.js
 /.next/
 /out/
-rss.xml
 
 # production
 /build

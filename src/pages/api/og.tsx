@@ -6,18 +6,17 @@ export const config = {
   runtime: "edge",
 }
 
-const font = fetch(
-  new URL(
-    "../../assets/fonts/pretendard/PretendardJP-Bold.otf",
-    import.meta.url
-  )
-).then((res) => res.arrayBuffer())
-
 export default async function handler(req: NextRequest) {
   const { searchParams } = new URL(req.url)
   const hasTitle = searchParams.has("title")
   const title = hasTitle ? searchParams.get("title")?.slice(0, 100) : ""
-  const fontData = await font
+
+  const endpoint = new URL("https://www.googleapis.com/webfonts/v1/webfonts")
+  endpoint.searchParams.set("family", "Noto Sans JP")
+  endpoint.searchParams.set("key", process.env.GOOGLE_FONTS_API_KEY ?? "")
+  const fontInfo = await fetch(endpoint).then((res) => res.json())
+  const fontResponse = await fetch(fontInfo.items[0].files["800"])
+  const fontData = await fontResponse.arrayBuffer()
 
   return new ImageResponse(
     (
