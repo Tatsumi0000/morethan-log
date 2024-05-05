@@ -6,6 +6,7 @@
     "type": "git",
     "url": "https://github.com/morethanmin/morethan-log.git"
   },
+  "packageManager": "yarn@4.2.1",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
