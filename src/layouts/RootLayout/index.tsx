@@ -47,6 +47,7 @@ import "prismjs/components/prism-ruby.js"
 import "prismjs/components/prism-php.js"
 import "prismjs/components/prism-rust.js"
 import "prismjs/components/prism-toml.js"
+import "prismjs/components/prism-makefile.js"
 
 type Props = {
   children: ReactNode
