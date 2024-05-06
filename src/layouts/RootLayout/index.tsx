@@ -40,6 +40,14 @@ import 'prismjs/components/prism-wasm.js'
 import 'prismjs/components/prism-yaml.js'
 import "prismjs/components/prism-go.js"
 
+import "prismjs/components/prism-vim.js"
+import "prismjs/components/prism-lua.js"
+import "prismjs/components/prism-markup.js"
+import "prismjs/components/prism-ruby.js"
+import "prismjs/components/prism-php.js"
+import "prismjs/components/prism-rust.js"
+import "prismjs/components/prism-toml.js"
+
 type Props = {
   children: ReactNode
 }
