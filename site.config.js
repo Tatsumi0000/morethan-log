@@ -24,6 +24,7 @@ const CONFIG = {
   blog: {
     title: "私的歌詞倉庫",
     description: "こんにちは！技術的なことを中心に書いているブログです。",
+    scheme: "dark", // 'light' | 'dark' | 'system'
   },
 
   // CONFIG configration (required)
