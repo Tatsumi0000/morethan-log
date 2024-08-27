@@ -2,6 +2,7 @@ import { CONFIG } from "site.config"
 import Head from "next/head"
 import { exclude } from "next-sitemap.config"
 import { useRouter } from "next/router"
+import { GoogleAnalytics } from "@next/third-parties/google"
 
 export type MetaConfigProps = {
   title: string
@@ -40,6 +41,8 @@ const MetaConfig: React.FC<MetaConfigProps> = (props) => {
       <meta name="twitter:description" content={props.description} />
       <meta name="twitter:card" content="summary_large_image" />
       {props.image && <meta name="twitter:image" content={props.image} />}
+      {/* Google Analytics */}
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_MEASUREMENT_ID as string} />
       {/* post */}
       {props.type === "Post" && (
         <>
