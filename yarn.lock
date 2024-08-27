@@ -603,6 +603,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/third-parties@npm:^14.2.6":
+  version: 14.2.6
+  resolution: "@next/third-parties@npm:14.2.6"
+  dependencies:
+    third-party-capital: "npm:1.0.20"
+  peerDependencies:
+    next: ^13.0.0 || ^14.0.0
+    react: ^18.2.0
+  checksum: 10c0/2b770b523eb716c329b24da8a2d69f37e413389f1c916a530b10fc2afa96dda085ce169b13c949a3abd7017d422cf642720ef096c269a614214025239e15a259
+  languageName: node
+  linkType: hard
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -5125,6 +5137,7 @@ __metadata:
     "@cloudflare/next-on-pages": "npm:^1.11.2"
     "@emotion/react": "npm:^11.11.1"
     "@emotion/styled": "npm:^11.11.0"
+    "@next/third-parties": "npm:^14.2.6"
     "@notionhq/client": "npm:^2.2.15"
     "@radix-ui/colors": "npm:^1.0.0"
     "@tanstack/react-query": "npm:^4.29.19"
@@ -6805,6 +6818,13 @@ __metadata:
   version: 0.2.0
   resolution: "text-table@npm:0.2.0"
   checksum: 10c0/02805740c12851ea5982686810702e2f14369a5f4c5c40a836821e3eefc65ffeec3131ba324692a37608294b0fd8c1e55a2dd571ffed4909822787668ddbee5c
+  languageName: node
+  linkType: hard
+
+"third-party-capital@npm:1.0.20":
+  version: 1.0.20
+  resolution: "third-party-capital@npm:1.0.20"
+  checksum: 10c0/7f45ff156ec9d7e2957a5b39061be22b780ffbd2d93c127252d908e2bff6cdd09f827a95909d457c8096e036f155006a38e355a06ee11cb6d63c7f4b150bbfb0
   languageName: node
   linkType: hard
 
