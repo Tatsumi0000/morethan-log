@@ -46,6 +46,7 @@ const CONFIG = {
     },
   },
   GoogleTagManager: {
+    enable: true,
     config: {
       measurementId: process.env.NEXT_PUBLIC_GOOGLE_MEASUREMENT_ID || "",
     }

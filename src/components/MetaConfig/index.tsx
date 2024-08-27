@@ -2,7 +2,6 @@ import { CONFIG } from "site.config"
 import Head from "next/head"
 import { exclude } from "next-sitemap.config"
 import { useRouter } from "next/router"
-import { GoogleTagManager } from "@next/third-parties/google"
 
 export type MetaConfigProps = {
   title: string
@@ -41,8 +40,6 @@ const MetaConfig: React.FC<MetaConfigProps> = (props) => {
       <meta name="twitter:description" content={props.description} />
       <meta name="twitter:card" content="summary_large_image" />
       {props.image && <meta name="twitter:image" content={props.image} />}
-      {/* Google Analytics */}
-      <GoogleTagManager gtmId={CONFIG.GoogleTagManager.config.measurementId} />
       {/* post */}
       {props.type === "Post" && (
         <>
