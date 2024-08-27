@@ -45,6 +45,11 @@ const CONFIG = {
       measurementId: process.env.NEXT_PUBLIC_GOOGLE_MEASUREMENT_ID || "",
     },
   },
+  GoogleTagManager: {
+    config: {
+      measurementId: process.env.NEXT_PUBLIC_GOOGLE_MEASUREMENT_ID || "",
+    }
+  },
   googleSearchConsole: {
     enable: false,
     config: {
