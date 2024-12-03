@@ -38,6 +38,7 @@
     "react-notion-x": "^6.16.0"
   },
   "devDependencies": {
+    "vercel": "39.1.1",
     "@types/gtag.js": "^0.0.12",
     "@types/node": "^18.11.15",
     "@types/react": "^18.0.26",
@@ -51,5 +52,8 @@
     "prettier": "^2.7.1",
     "prismjs": "^1.29.0",
     "typescript": "^4.9.4"
+  },
+  "overrides": {
+    "vercel": "$vercel"
   }
 }
