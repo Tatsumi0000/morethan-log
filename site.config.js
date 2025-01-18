@@ -5,7 +5,7 @@ const CONFIG = {
     image: "/avatar.webp", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
     role: "mobile developer",
     bio: "I study Android, iOS, Docker, Vue.js, Rails and Kubernetes.",
-    email: "info@aespa.love",
+    email: "info@tatsumi0000.com",
     github: "Tatsumi0000",
     linkedin: "",
     instagram: "",
